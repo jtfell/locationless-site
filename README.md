@@ -1,2 +1,2 @@
 # locationless-site
-Landing Page for Locationless
+Landing Page for https://locationless.club
