@@ -5,21 +5,105 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <title>Locationless</title>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:500" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="uikit.min.css" media="screen,projection" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
 <body>
-  <div id="container">
-    <div id="title">
-      <center><img width="160" height="160" src="icon.svg" alt="logo" /></center>
-    </div>
-    <div id="subtitle"><center>Locationless</center></div>
 
-    <div id="body"><center>Sync up your travel schedule with other nomads</center></div>
-    <div id="signup">
-      <center><a href="https://app.locationless.club">Get Started</a></center>
-    </div>
+  <!-- Hero Header -->
+  <header class="uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport uk-contrast">
+    <div class="uk-container uk-container-center">
+      <section class="uk-grid uk-grid-match">
+        <div class="uk-width-medium-1-1">
+          <div class="uk-panel uk-text-center">
+            <h1>LOCATIONLESS</h1>
+            <h3>Coordination Without Location</h3>
+            <a id="coming-soon" class="uk-button uk-button-primary uk-margin-top" href="">Coming Soon</a>
+          </div>
+       </div>
+     </section>
+   </div>
+  </header>
+
+	<!-- General overview -->
+  <div class="uk-background-secondary">
+    <div class="uk-container">
+      <div class="uk-flex">
+        <div class="browser-container">
+          <div class="browser-window">
+            <img id="browser" alt="Browser Window" src="trip-screenshot.png" style="height:500px"/>
+          </div>
+        </div>
+        <ul id="screenie-selector" class="uk-flex uk-flex-column uk-flex-around uk-light uk-margin-remove">
+          <a id="opt-exp">
+            Explore possible destinations with ovelapping friends' trips
+          </a>
+          <a id="opt-loc">Add your future locations as you plan them</a>
+          <a class="active-screenie" id="opt-camp">If you overlap with friends, create a Camp with them</a>
+          <a id="opt-tele">Use the integrated bot in a Telegram group chat</a>
+        </ul>
+			</div>
+  	</div>
   </div>
+
+	<!-- Differentiator Features  -->
+	<div class="uk-column-1-2@s uk-column-1-4@l uk-background-secondar uk-margin">
+		<div class="uk-container">
+			<div class="uk-card uk-card-body">
+				<h3 class="uk-card-title">Private</h3>
+				Your trips are only visible to friends
+			</div>
+			<div class="uk-card uk-card-body">
+				<h3 class="uk-card-title">Keep in Sync</h3>
+				Suggestions to overlap with friends 
+			</div>
+			<div class="uk-card uk-card-body">
+				<h3 class="uk-card-title">Easy Coordination</h3>
+				Create group chats via Telegram
+			</div>
+			<div class="uk-card uk-card-body">
+				<h3 class="uk-card-title">Free Forever</h3>
+				We will never charge for this service
+			</div>
+		</div>
+	</div>
+
 </body>
+
+  <script>
+    var browserImg = document.querySelector('#browser');
+    
+    var elems = [
+      {
+        id: '#opt-exp',
+        img: 'dunno.jpeg'
+      },
+      {
+        id: '#opt-loc',
+        img: 'dashboard-screenshot.png'
+      },
+      {
+        id: '#opt-camp',
+        img: 'trip-screenshot.png'
+      },
+      {
+        id: '#opt-tele',
+        img: 'telegram-screenshot.png'
+      },
+    ];
+    elems.forEach(function (info) {
+      var element = document.querySelector(info.id);
+      element.addEventListener('click', function() {
+        browserImg.src = info.img;
+
+        elems.forEach(function (info2) {
+          document.querySelector(info2.id).classList.remove('active-screenie');
+        });
+        element.classList.add('active-screenie');
+      }, false);
+    });
+  </script>
 
 </html>
