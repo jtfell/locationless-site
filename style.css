@@ -2,20 +2,42 @@
   margin: 0;
   padding: 0;
   border: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Gothic A1', sans-serif;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  background-color: #bf4e4e !important;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Raleway', sans-serif !important;
+	font-family: 'Gothic A1', sans-serif !important;
 }
 
+.hero-img {
+		background-image: url(https://template28.carrd.co/assets/images/bg.jpg?v13386791156351);
+    height: 100vh;
+    width: 65vw;
+}
+
+.hero-text {
+    width: 35vw;
+}
+
+@media (max-width: 600px) {
+  .hero-img {
+      height: 20vh;
+      width: 100vw;
+      display: none;
+  }
+  .hero-text {
+      flex: 0 0 100%;
+      width: 100vw;
+  }
+}
 
 /* Browser screenshot containers */
 .container {
@@ -54,15 +76,23 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 
   font-size: 18px;
-	font-family: 'Raleway', sans-serif !important;
+	font-family: 'Gothic A1', sans-serif;
   height: 100%;
   width: 100%;
 }
 
+.diff-panel {
+  background-color: white;
+}
+
+.screenie-panel a {
+  color: black !important;
+}
+
 #coming-soon {
-  background-color: #b37a7a !important;
+  background-color: black !important;
 }
 
 .active-screenie {
-  color: #b37a7a !important;
+  color: #bf4e4e !important;
 }

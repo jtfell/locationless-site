@@ -5,7 +5,7 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <title>Locationless</title>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen,projection" />
-  <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:500" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="uikit.min.css" media="screen,projection" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
@@ -25,42 +25,24 @@
 
   <!-- Hero Header -->
   <header class="uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport uk-contrast">
-    <div class="uk-container uk-container-center">
-      <section class="uk-grid uk-grid-match">
-        <div class="uk-width-medium-1-1">
-          <div class="uk-panel uk-text-center">
-            <h1>LOCATIONLESS</h1>
-            <h3>A service for digital nomads to plan and coordinate their travel schedules in pursuit of more time spent with friends.</h3>
-            <a id="coming-soon" class="uk-button uk-button-primary uk-margin-top" href="">Coming Soon</a>
-          </div>
-       </div>
-     </section>
+    <div class="hero-text">
+      <div class="uk-container uk-container-center">
+      <div class="uk-panel uk-text-center">
+        <h1>LOCATIONLESS</h1>
+        <h3>
+          A service for digital nomads to plan and coordinate their travel schedules in
+          pursuit of more time spent with friends.
+        </h3>
+        <a id="coming-soon" class="uk-button uk-button-primary uk-margin-top" href="">Coming Soon</a>
+      </div>
+      </div>
+    </div>
+    <div class="hero-img" />
    </div>
   </header>
 
-	<!-- General overview -->
-  <div class="uk-background-secondary">
-    <div class="uk-container">
-      <div class="uk-flex">
-        <div class="browser-container">
-          <div class="browser-window">
-            <img id="browser" alt="Browser Window" src="trip-screenshot.png" style="height:500px"/>
-          </div>
-        </div>
-        <ul id="screenie-selector" class="uk-flex uk-flex-column uk-flex-around uk-light uk-margin-remove">
-          <a id="opt-exp">
-            Explore possible destinations with ovelapping friends' trips
-          </a>
-          <a id="opt-loc">Add your future locations as you plan them</a>
-          <a class="active-screenie" id="opt-camp">If you overlap with friends, create a Camp with them</a>
-          <a id="opt-tele">Use the integrated bot in a Telegram group chat</a>
-        </ul>
-			</div>
-  	</div>
-  </div>
-
 	<!-- Differentiator Features  -->
-	<div class="uk-column-1-2@s uk-column-1-4@l uk-background-secondar uk-margin">
+	<div class="uk-column-1-2@s uk-column-1-4@l diff-panel">
 		<div class="uk-container">
 			<div class="uk-card uk-card-body">
 				<h3 class="uk-card-title">Private</h3>
@@ -81,6 +63,26 @@
 		</div>
 	</div>
 
+
+	<!-- General overview - Hidden for now -->
+  <div class="screenie-panel" style="display:none">
+    <div class="uk-container">
+      <div class="uk-flex">
+        <div class="browser-container">
+          <div class="browser-window">
+            <img id="browser" alt="Browser Window" src="dashboard-screenshot.png" style="height:400px"/>
+          </div>
+        </div>
+        <ul id="screenie-selector" class="uk-flex uk-flex-column uk-flex-around uk-margin-remove">
+          <a class="active-screenie" id="opt-loc">Add your future locations as you plan them</a>
+          <a id="opt-prof">Visualise your upcoming or past trips</a>
+          <a id="opt-tele">Use the integrated bot in a Telegram group chat</a>
+          <a id="opt-friend">Find friends </a>
+        </ul>
+			</div>
+  	</div>
+  </div>
+
 </body>
 
   <script>
@@ -88,16 +90,16 @@
     
     var elems = [
       {
-        id: '#opt-exp',
-        img: 'dunno.jpeg'
+        id: '#opt-prof',
+        img: 'profile-screenshot.png'
       },
       {
         id: '#opt-loc',
         img: 'dashboard-screenshot.png'
       },
       {
-        id: '#opt-camp',
-        img: 'trip-screenshot.png'
+        id: '#opt-friend',
+        img: 'friends-screenshot.png'
       },
       {
         id: '#opt-tele',
