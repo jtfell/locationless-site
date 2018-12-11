@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 35vw;
 }
 
+.hero-text h1,
+.hero-text h3 {
+    color: white !important;
+}
+
 @media (max-width: 600px) {
   .hero-img {
       height: 20vh;
